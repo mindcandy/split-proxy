@@ -78,7 +78,7 @@ try {
 }
 
 catch (e) {
-    log("Shit! Something got borked!" + " (" + e + ")");
+    log("Whoaaa! Something went wrong!" + " (" + e + ")");
     process.exit(1);
 }
 
