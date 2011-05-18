@@ -18,7 +18,7 @@ values, eg.
 
 And then run it:
 
-  ./node split-proxy.js
+  node ./split-proxy.js
 
 Notice
 ======
