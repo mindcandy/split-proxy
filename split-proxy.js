@@ -8,7 +8,6 @@ var port = 8080;
 try {
     http.createServer(function(request, response) {
 
-        // var url = request.url.split(/http:\/\/[a-z0-9.-]+/)[1];
         var url = request.url;
 
         log(request.method 
