@@ -1,3 +1,5 @@
+About
+=====
 Simple node.js script to split incoming requests and send them to test-target,
 ignoring all responses from this target and to live-target, which responses
 are actually getting passed back to client.
@@ -14,5 +16,12 @@ values, eg.
   var test_target = "192.168.1.1";
   var port = 8080;
 
+And then run it:
+
   ./nodejs split-proxy.js
+
+Notice
+======
+It prints 4 lines every request to stdout; if you are getting a lot of traffic
+it may be quite chatty.
 
