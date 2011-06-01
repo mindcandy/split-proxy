@@ -1,3 +1,4 @@
+
 About
 =====
 Simple node.js script to split incoming requests and send them to test-target,
@@ -19,6 +20,12 @@ values, eg.
 And then run it:
 
   node ./split-proxy.js
+
+Self-healing
+============
+To enable super-dooper self-healing mode run split proxy as following:
+
+  while [ 1 ]; do node ./split-proxy.js; done
 
 Notice
 ======
