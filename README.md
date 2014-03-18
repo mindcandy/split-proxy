@@ -1,6 +1,6 @@
+Split proxy
+===========
 
-About
-=====
 Simple node.js script to split incoming requests and send them to test-target,
 ignoring all responses from this target and to live-target, which responses
 are actually getting passed back to client.
@@ -9,26 +9,31 @@ Used to split live traffic to stress test X (where X is a new webapp node(s),
 new DB server or whatever else you need).
 
 Use
-===
+---
 Edit split-proxy.js file and set live_target, test_target and port to desired
 values, eg.
 
+```
   var live_target = "123.123.123.123";
   var test_target = "192.168.1.1";
   var port = 8080;
+```
 
 And then run it:
 
+```
   node ./split-proxy.js
+```
 
 Self-healing
-============
+------------
 To enable super-dooper self-healing mode run split proxy as following:
 
+```
   while [ 1 ]; do node ./split-proxy.js; done
+```
 
 Notice
-======
+------
 It prints 4 lines every request to stdout; if you are getting a lot of traffic
 it may be quite chatty.
-
